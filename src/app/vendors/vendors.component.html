@@ -1,0 +1,45 @@
+
+<h3 style="color: green">Vendor List:</h3>
+
+<table class="table table-bordered table-hover" style="width: 100%">
+	<thead style="background: #286090; color: #f7f7f7;">
+		<tr>
+			<th>CODE</th>
+			<th>FULL NAME</th>
+			<th>TYPE</th>
+			<th>DOC</th>
+			<th>ADDRESS</th>
+			<th>REPRESENTATIVE</th>
+			<th>PHONENUMBER</th>
+			<th>EMAIL</th>
+			<th>ACTIVO</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let ven of vendors">
+			<td>{{ven.codeVendor}}</td>
+			<td>{{ven.name}}, {{ven.firstLastName}}  {{ven.secondLastName}}</td>
+			<td>{{ven.typeVendor}}</td>
+			<td>{{ven.docIdentity}}</td>
+			<td>{{ven.address}}</td>
+			<td>{{ven.representative}}</td>
+			<td>{{ven.phoneNumber}}</td>
+			<td>{{ven.email}}</td>
+			<td>{{ven.active}}</td>
+			<td><a [routerLink]="['/detail', ven.idVendor]"
+				class="btn btn-info"> Edit </a> <a
+				(click)="deleteVendor(ven.idVendor)" class="btn btn-danger">
+					Delete </a></td>
+		</tr>
+
+	</tbody>
+</table>
+<hr>
+<div class="row">
+	<div class="col-sm-4">
+
+		<div class="alert alert-success alert-dismissable" *ngIf="msg">
+			{{msg}}</div>
+	</div>
+</div>

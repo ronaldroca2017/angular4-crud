@@ -1,0 +1,148 @@
+<h3>Edit Vendor Form</h3>
+<div [hidden]="submitted">
+    <form>
+      
+   <div class="row">
+			<div class="col-sm-2">
+				<div class="form-group">
+					<label for="code">Code Vendor</label> <input type="text"
+						class="form-control" id="code" required
+						[(ngModel)]="vendor.codeVendor" name="code">
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="name">name</label> <input type="text"
+						class="form-control" id="name" [(ngModel)]="vendor.name"
+						name="name">
+				</div>
+			</div>
+
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="firstLastName">First Name</label> <input type="text"
+						class="form-control" id="firstLastName" required
+						[(ngModel)]="vendor.firstLastName" name="firstLastName">
+				</div>
+			</div>
+
+			<div class="col-sm-3">
+				<div class="form-group">
+					<label for="secondLastName">Last Name</label> <input type="text"
+						class="form-control" id="secondLastName"
+						[(ngModel)]="vendor.secondLastName" name="secondLastName">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+		
+		<div class="col-sm-3">
+		<div class="form-group">
+			<label for="docIdentity">docIdentity</label> <input type="text"
+				class="form-control" id="docIdentity"
+				[(ngModel)]="vendor.docIdentity" name="docIdentity">
+		</div>
+	</div>
+
+		<div class="col-sm-3">
+	
+		
+			<div class="form-group">
+			<label for="cciNumber">cciNumber</label> <input type="text"
+				class="form-control" id="cciNumber" [(ngModel)]="vendor.cciNumber"
+				name="cciNumber">
+		</div>
+		
+			</div>
+
+		<div class="col-sm-3">
+		<div class="form-group">
+			<label for="representative">representative</label> <input type="text"
+				class="form-control" id="representative"
+				[(ngModel)]="vendor.representative" name="representative">
+		</div>
+			</div>
+
+		<div class="col-sm-3">
+		<div class="form-group">
+			<label for="phoneNumber">phoneNumber</label> <input type="text"
+				class="form-control" id="phoneNumber"
+				[(ngModel)]="vendor.phoneNumber" name="phoneNumber">
+		</div>
+			</div>
+		
+		</div>
+
+
+<div class="row">
+		
+		<div class="col-sm-3">
+		<div class="form-group">
+			<label for="acronym">acronym</label> <input type="text"
+				class="form-control" id="acronym" [(ngModel)]="vendor.acronym"
+				name="acronym">
+		</div>
+</div>
+
+<div class="col-sm-4">
+		<div class="form-group">
+			<label for="email">email</label> <input type="text"
+				class="form-control" id="email" [(ngModel)]="vendor.email"
+				name="email">
+		</div>
+		</div>
+
+<div class="col-sm-5">
+			<div class="form-group">
+			<label for="name">address</label> <input type="text"
+				class="form-control" id="address" [(ngModel)]="vendor.address"
+				name="address">
+		</div>
+		</div>
+
+
+
+
+</div>
+
+<div class = "row">
+
+<div class="col-sm-3">
+		<div class="form-group">
+			<label for="typeVendor">typeVendor</label> <input type="number"
+				class="form-control" id="cciNumber" [(ngModel)]="vendor.typeVendor"
+				name="typeVendor">
+		</div>
+		</div>
+		
+		
+		<div class="col-sm-1">
+		<label for="active">active</label> 
+		</div>
+		<div class="col-sm-3">
+		<div class="form-group">
+		
+		<label class="form-check-inline">SI
+    <input class="form-check-input" type="radio" name="act" [value]="true" [(ngModel)]="vendor.flagActive">
+</label>
+<label class="form-check-inline">NO
+    <input class="form-check-input" type="radio" name="act" [value]="false" [(ngModel)]="vendor.flagActive">
+</label>
+		
+		
+			
+		</div>
+		</div>
+
+</div>
+
+      
+      <div class="btn-group">
+		<button class="btn btn-primary" (click)="update()">Update</button>
+	  </div>
+      
+    </form>
+</div>
+
